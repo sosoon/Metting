@@ -1,0 +1,35 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "24.0.0"
+
+    defaultConfig {
+        applicationId "com.example.anqel.metting"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile files('libs/adapter-rxjava-2.0.1.jar')
+    compile files('libs/converter-gson-2.0.1.jar')
+    compile files('libs/rxjava-1.1.2.jar')
+    compile files('libs/retrofit-2.0.1.jar')
+    compile files('libs/okio-1.6.0.jar')
+    compile files('libs/okhttp-3.2.0.jar')
+    compile files('libs/gson-2.6.2.jar')
+    compile files('libs/logging-interceptor-3.2.0.jar')
+    compile files('libs/logger-1.10.jar')
+    compile files('libs/rxandroid-1.10.jar')
+}
